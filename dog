@@ -1,0 +1,6 @@
+accueil
+ - liste des races
+ - btn image aléatoires
+page races
+ - si sousrace liste sous races
+ - si non photos de la race
