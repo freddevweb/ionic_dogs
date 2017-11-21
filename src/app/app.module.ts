@@ -6,25 +6,35 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ApiProvider } from '../providers/api/api';
+import { SubBreedsPageModule } from '../pages/sub-breeds/sub-breeds.module';
+import { HomePageModule } from '../pages/home/home.module';
+import { HttpClientModule } from '@angular/common/http';
+import { SliderPageModule } from '../pages/slider/slider.module';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+	IonicModule.forRoot(MyApp),
+	HomePageModule,
+	HttpClientModule,
+	HomePageModule,
+	SubBreedsPageModule,
+	SliderPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage
+	MyApp,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ApiProvider
   ]
 })
 export class AppModule {}

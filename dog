@@ -4,3 +4,9 @@ accueil
 page races
  - si sousrace liste sous races
  - si non photos de la race
+
+
+ionic generate page home
+ionic generate page subBreeds
+
+ionic generate provider api
