@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar>
+	<ion-title *ngIf="breed" >{{breed.name}}</ion-title>
+	<ion-title *ngIf="subBreed" >{{subBreed.breedName}} - {{subBreed.subBreedName}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<ion-slides pager>
+			
+		<ion-slide *ngFor="let breedImg of breedImgs" style="background-color: white">
+			<img src="{{breedImg}}">
+		</ion-slide>
+	
+		
+	</ion-slides>
+</ion-content>
